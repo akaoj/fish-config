@@ -10,6 +10,10 @@ function f -d "fg"
     fg $argv
 end
 
+function g -d "git"
+    git $argv
+end
+
 
 
 #############
