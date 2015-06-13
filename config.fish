@@ -1,3 +1,12 @@
+################
+# Key bindings #
+################
+
+# Alt-r => go to next word (useful for auto-completion)
+bind \er forward-word
+
+
+
 ###########
 # Aliases #
 ###########
