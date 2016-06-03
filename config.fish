@@ -7,52 +7,26 @@ bind \er forward-word
 
 
 
-###########
-# Aliases #
-###########
+#################
+# Abbreviations #
+#################
 
-function v -d "vim"
-    vim -p $argv
-end
+abbr -a f "fg %"
 
-function f -d "fg"
-    fg $argv
-end
+abbr -a g git
+abbr -a gc git commit -m
+abbr -a gs git status
+abbr -a gb git branch
+abbr -a gu "git checkout master ;and git pull ;and git checkout - ;and git rebase master"
+abbr -a gd git diff
+abbr -a gaa git add --all
 
-function g -d "git"
-    git $argv
-end
+abbr -a l "less -SM +Gg"
+
+abbr -a v vim
 
 
-
-#############
-# Functions #
-#############
-
-# Retrieve current git branch
-function _get_git_branch
-    echo '['(git rev-parse --abbrev-ref HEAD 2> /dev/null)']'
-end
 
 # Make ssh-add work
 setenv SSH_ENV $HOME/.ssh/environment
-
-function start_agent
-    echo "Initializing new SSH agent..."
-    ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
-    echo "succeeded"
-    chmod 600 $SSH_ENV
-    . $SSH_ENV > /dev/null
-    ssh-add
-end
-
-function test_identities
-    ssh-add -l | grep "The agent has no identities" > /dev/null
-    if [ $status -eq 0 ]
-        ssh-add
-        if [ $status -eq 2 ]
-            start_agent
-        end
-    end
-end
 
