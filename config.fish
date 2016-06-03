@@ -20,6 +20,7 @@ abbr -a gb git branch
 abbr -a gu "git checkout master ;and git pull ;and git checkout - ;and git rebase master"
 abbr -a gd git diff
 abbr -a gaa git add --all
+abbr -a gl "git log master.."
 
 abbr -a l "less -SM +Gg"
 
