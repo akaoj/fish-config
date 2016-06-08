@@ -13,7 +13,12 @@ function start_ssh_agent
 		if [ $status -eq 0 ]
 			test_identities
 		else
-			start_agent
+			echo "Initializing new SSH agent..."
+			ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
+			echo "succeeded"
+			chmod 600 $SSH_ENV
+			. $SSH_ENV > /dev/null
+			ssh-add
 		end
 	end
 end
