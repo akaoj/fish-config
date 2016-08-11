@@ -10,6 +10,6 @@ function fish_prompt
 
 	# Promp looks like:
 	# [user] time workdir [gitBranch] >
-	printf '%s %s %s %s%s ' (set_color $_line_color)'['(whoami)']' (date '+%H:%M:%S') (pwd) (set_color normal)(set_color $_branch_color)(git_get_branch)(set_color $_line_color) '>'(set_color normal)
+	printf '%s %s %s %s %s%s ' (set_color $_line_color)'['(whoami)'@'(hostname)']' (date '+%H:%M:%S') (pwd) (set_color normal)(set_color $_branch_color)(git_get_branch)(set_color $_line_color) '>'(set_color normal)
 end
 
