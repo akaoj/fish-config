@@ -22,7 +22,7 @@ abbr -a gl "git log master.."  # display commits added on top of master
 abbr -a gcd "cd (git rev-parse --show-toplevel)"  # cd in the root folder of the directory
 abbr -a gu "git fetch --tags --prune --all"
 
-abbr -a gv "git diff HEAD~1 --name-only | xargs nvim"  # open all modified files in neovim
+abbr -a gv "git diff HEAD --name-only --relative | xargs nvim"  # open all modified files in neovim
 
 abbr -a l "less -SM +Gg -R"
 

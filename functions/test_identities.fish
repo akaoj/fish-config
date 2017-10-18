@@ -3,7 +3,7 @@ function test_identities
 	if [ $status -eq 0 ]
 		ssh-add
 		if [ $status -eq 2 ]
-			start_agent
+			start_ssh_agent
 		end
 	end
 end
