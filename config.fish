@@ -21,15 +21,19 @@ abbr -a ga   "git add --all"
 abbr -a gap  "git add -N --all ;and git add --all --patch"  # "git add patch": add all files in patch mode
 abbr -a gb   "git branch"
 abbr -a gc   "git commit"
-abbr -a gd   "git diff HEAD"
-abbr -a gdm  "git diff origin/master"  # "git diff master"
+abbr -a gd   "git diff"
+abbr -a gdh  "git diff HEAD"
+abbr -a gdhs "git diff HEAD --staged"
+abbr -a gdm  "git diff master"
+abbr -a gdom "git diff origin/master"
 abbr -a gdo  "git diff (git_get_remote_branch)"  # "git diff origin": displays diff between current working set and origin/<branch>
-abbr -a gdw  "git diff --word-diff=color --word-diff-regex=. HEAD"  # "git diff word": displays diffs like online tools (i.e.: GitHub or GitLab)
-abbr -a gdwm "git diff --word-diff=color --word-diff-regex=. origin/master"  # "git diff word master": displays diffs like online tools (i.e.: GitHub or GitLab) against origin/master
+abbr -a gdw  "git diff --word-diff=color --word-diff-regex=."  # "git diff word": displays diffs like online tools (i.e.: GitHub or GitLab)
+abbr -a gdwm "git diff --word-diff=color --word-diff-regex=. master"  # "git diff word master": displays diffs like online tools (i.e.: GitHub or GitLab) against origin/master
 abbr -a gk   "git checkout"
 abbr -a gl   "git log"
 abbr -a glo  "git log (git_get_remote_branch).."  # "git log origin": displays commits added on top of remote branch
-abbr -a glm  "git log origin/master.."  # "git log master": displays commits added on top of master
+abbr -a glm  "git log master.."
+abbr -a glom "git log origin/master.."
 abbr -a glv  "git log --oneline --decorate --all --graph"  # "git log visual": displays visual log
 abbr -a gp   "git push"
 abbr -a gpf  "git push --force-with-lease"
@@ -43,6 +47,7 @@ abbr -a gw   "git worktree"
 # Tooling
 abbr -a k "kubectl"
 abbr -a l "ls -alh"
+abbr -a m "make"
 abbr -a tf "terraform"
 abbr -a v "nvim"
 
