@@ -29,6 +29,7 @@ abbr -a gdom "git diff origin/master"
 abbr -a gdo  "git diff (git_get_remote_branch)"  # "git diff origin": displays diff between current working set and origin/<branch>
 abbr -a gdw  "git diff --word-diff=color --word-diff-regex=."  # "git diff word": displays diffs like online tools (i.e.: GitHub or GitLab)
 abbr -a gdwm "git diff --word-diff=color --word-diff-regex=. master"  # "git diff word master": displays diffs like online tools (i.e.: GitHub or GitLab) against origin/master
+abbr -a gg   "git grep"
 abbr -a gk   "git checkout"
 abbr -a gl   "git log"
 abbr -a glo  "git log (git_get_remote_branch).."  # "git log origin": displays commits added on top of remote branch
