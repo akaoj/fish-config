@@ -55,4 +55,5 @@ abbr -a v "nvim"
 # Make ssh-add work
 setenv SSH_ENV $HOME/.ssh/environment
 
+set -x FZF_DEFAULT_COMMAND "fd --type f --strip-cwd-prefix"
 set -x FZF_CTRL_T_OPTS "--preview='highlight --force --out-format=truecolor -i {}' --tabstop=4 --multi"
